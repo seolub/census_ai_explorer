@@ -1,0 +1,20 @@
+# App
+streamlit>=1.30
+python-dotenv>=1.0
+ 
+# LLM + agent framework
+openai>=1.40
+langgraph>=0.2
+ 
+# Vector search over Census concept strings
+langchain-community>=0.2
+chromadb>=0.5
+sentence-transformers>=2.7
+ 
+# Data + HTTP
+pandas>=2.0
+requests>=2.31
+ 
+# Index build script
+tqdm>=4.66
+ 
