@@ -46,9 +46,9 @@ The user walks through six stages:
 ## Architecture
 
 ```
-app.py              Streamlit UI + explicit stage machine
-state.py            TypedDict that defines the conversation state
-nodes.py            Pure State -> State functions, one per workflow step
+app.py              Streamlit UI
+state.py            TypedDict that defines the workflow state
+nodes.py            Workflow nodes
 graph.py            LangGraph subgraph for the one piece that needs it
                     (the "refine" cycle at the concept-picking stage)
 utils/
@@ -64,8 +64,7 @@ Most of the workflow is a linear wizard — six stages, one path through — so
 `app.py` drives the stages directly. The one place I let LangGraph's runtime
 actually run is the concept-picking subgraph in `graph.py`. Picking a concept
 has a cycle: if the user types a new search instead of a row number, the
-workflow loops back to the vector search with the new query. That cycle is
-exactly what state-machine frameworks are for.
+workflow loops back to the vector search with the new query.
 
 The rest of the stages are calls in `app.py`. 
 
