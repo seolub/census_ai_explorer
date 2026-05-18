@@ -7,6 +7,9 @@ variable and a geography, and download the results as CSV.
 Built with Streamlit, LangGraph, OpenAI (gpt-4o-mini), and Chroma for semantic
 search over the ~3k variables in the Census catalog.
 
+## Quick introduction
+[![Census Chat demo](https://img.youtube.com/vi/kn7ZUshZFgI/hqdefault.jpg)](https://youtu.be/kn7ZUshZFgI)
+
 ## Quick start
 
 ```bash
